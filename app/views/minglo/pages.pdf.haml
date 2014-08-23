@@ -1,0 +1,5 @@
+- @cards.each_slice(24) do |cards_slice|
+
+  .pdf-same-page
+    = render 'minglo/page', cards: [nil] + cards_slice
+

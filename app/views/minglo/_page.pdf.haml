@@ -1,0 +1,29 @@
+.minglo-page
+
+  .minglo-header.clearfix
+    .left
+      Minglo
+    .right
+      Ton but est d’aller à la rencontre des autres invités. Discute avec eux et dès que tu rencontres quelqu’un qui correspond à une case de ta grille, écris son prénom ! Remplis la feuille sans mettre deux fois la même personne et, dès que tu as terminé, crie MINGLOOO !
+
+  %table.grid
+    %tbody
+
+      - cards.each_slice(5) do |cards_slice|
+
+        %tr
+
+          - cards_slice.each do |card_path|
+
+
+            - if card_path.nil?
+
+              %td.example
+
+                = render 'minglo/card', title: "Se marie aujourd'hui", image_arg: 'mariage.png', name: "jon"
+
+            - else
+
+              %td
+
+                = render 'minglo/card', title: File.basename(card_path, File.extname(card_path)), image_arg: card_path.gsub(Rails.root.join('app', 'assets', 'images/').to_s, '')

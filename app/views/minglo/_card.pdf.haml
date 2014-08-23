@@ -1,0 +1,15 @@
+.card
+
+  .title= title
+
+  .image
+    - if @debug
+      = image_tag image_arg
+    - else
+      = wicked_pdf_image_tag image_arg
+
+  .name
+    - if defined?(name)
+      .value.handwritten= name
+    - else
+      .value

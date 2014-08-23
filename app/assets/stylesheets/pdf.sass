@@ -1,0 +1,82 @@
+html
+  font-family: sans-serif
+
+*,
+*:before,
+*:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  margin: 0
+  text-align: center
+
+.clearfix
+  &:before,
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+.pdf-page-break
+  display: block
+  clear: both
+  page-break-after: always
+.pdf-same-page
+  page-break-inside: avoid
+
+.minglo-header
+  background: #ccc
+  border: 2px solid black
+  // margin-top: 10px
+  padding: 20px
+
+  .left
+    float: left
+    width: 40%
+    height: 120px
+    font-size: 50px
+    text-align: left
+    padding-top: 16px
+  .right
+    text-align: justify
+    font-size: 16px
+
+table.grid
+  width: 100%
+  margin-top: 20px
+  border-collapse: collapse
+  border-spacing: 0
+
+  td, th
+    padding: 0
+
+  td
+    width: 20%
+    border: 1px solid black
+
+    .title
+      margin-top: 5px
+      height: 40px
+      font-size: 12px
+      line-height: 14px
+    .image
+      height: 85px
+      img
+        max-width: 130px
+        max-height: 65px
+    .name
+      height: 25px
+      margin: 5px 0
+
+      .value
+        display: inline-block
+        width: 100px
+        height: 20px
+        border-bottom: 1px solid black
+        font-size: 20px
+
+    &.example
+      background: #ddd
