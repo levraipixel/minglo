@@ -1,6 +1,6 @@
 # How to
 
-1. put your cards in `app/assets/images/cards`
+1. put your cards in `app/assets/images/cards` (e.g. app/assets/images/cards/hello.jpg)
 
 2. run `bundle` to install dependencies
 
